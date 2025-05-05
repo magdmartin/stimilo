@@ -1,0 +1,56 @@
+/* Profile image spacing */
+.intro-profile-pic {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Add spacing between role blocks */
+.role-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 2rem;
+  row-gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .role-cards {
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 1rem;
+  }
+}
+
+/* CTA section spacing */
+#contact a {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+/* Improve section spacing on mobile */
+section {
+  padding-bottom: 2rem;
+}
+
+/* Optional: Emphasize key headlines visually */
+#current h2,
+#past h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+/* Optional: Tighter list spacing in values section */
+#principles ul li {
+  margin-bottom: 0.75rem;
+}
+
+/* Remove default footer "Pages" if visible */
+.site-footer nav[aria-label="Page navigation"] {
+  display: none;
+}
+

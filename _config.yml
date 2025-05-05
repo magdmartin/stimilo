@@ -1,0 +1,95 @@
+lang:                  en
+title:                 stimilo
+copyright:             © 2025. All rights reserved.
+description:      Stimulating Process<br><br><b>Martin Magdinier<b><br>Fractional Product & Ops Lead · Process Engineering
+accent_image:
+  background: "linear-gradient(17deg, rgba(117,117,117,1) 0%, rgba(26,35,126,1) 50%, rgba(33,150,243,1) 100%)"
+accent_color: "#757575"  # dark blue base
+theme_color: "#2196f3"   # for mobile header or theme meta color
+
+google_fonts: Sora:400,600
+font:         Sora
+
+hydejack:
+  sidebar:
+    title: "stimilo"
+    subtitle: "Fractional Product & Ops Lead"
+    image: "/assets/img/Martin.jpeg"
+
+  profile:
+    name: stimilo
+    tagline: Stimulating Process.
+    location: Montréal — Working globally
+
+  post_addons:         [about, newsletter, related, random, comments]
+  project_addons:      [about, newsletter, other, comments]
+
+  no_mark_external:    false
+  no_push_state:       false
+  no_drawer:           false
+  no_navbar:           false
+  no_search:           false
+  no_inline_css:       false
+  no_page_style:       false
+  no_break_layout:     false
+  no_toc:              false
+  no_third_column:     false
+  no_large_headings:   false
+  no_structured_data:  false
+  no_theme_color:      false
+  no_breadcrumbs:      false
+
+  use_lsi:             true
+  cookies_banner:      true
+  advertise:           true
+  hide_dates:          false
+  hide_last_modified:  false
+
+  dark_mode:
+    always:            false
+    dynamic:           true
+    sunrise:           6
+    sunset:            18
+    icon:              true
+
+  offline:
+    enabled:           false
+    cache_version:     1
+    precache_assets:
+      - /assets/img/swipe.svg
+      
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
+
+menu:
+  - name: "GitHub"
+    url: "https://github.com/magdmartin"
+    external: true
+  - name: "LinkedIn"
+    url: "https://www.linkedin.com/in/magdinier"
+    external: true
+  
+optional_front_matter:
+  remove_originals:    true
+
+readme_index:
+  remove_originals:    true
+  with_frontmatter:    true
+
+relative_links:
+  collections:         true
+
+titles_from_headings:
+  strip_title:         true
+  collections:         true
+
+compress_html:
+  comments:            ["<!-- ", " -->"]
+  clippings:           all
+  endings:             all
+  ignore:
+    envs:              [development]
+
+sass:
+  style:               compressed
