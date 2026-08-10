@@ -37,7 +37,7 @@ hydejack:
   no_large_headings:   true
   no_structured_data:  false
   no_theme_color:      false
-  no_breadcrumbs:      false
+  no_breadcrumbs:      true
 
   use_lsi:             true
   cookies_banner:      true
