@@ -1,0 +1,73 @@
+hero:
+  eyebrow: "Consultant en opérations, processus et IA · Montréal"
+  title: "Donner à votre équipe une plus grande portée."
+  subtitle: "Transformer l'expertise en système."
+  lead:
+    - "Une trop grande part de votre fonctionnement vit dans votre tête et dans les habitudes de votre équipe. Vous êtes la réponse à chaque question, et les processus critiques dépendent d'une personne."
+    - "Mon travail consiste à inscrire votre façon de faire dans l'organisation elle-même, pour que votre équipe opère à plus grande échelle sans perdre en qualité."
+  cta_label: "Réserver un appel de 45 minutes"
+  photo_alt: "Martin Magdinier"
+
+
+audience:
+  heading: "À qui cela s'adresse, et ce que vous y gagnez"
+  intro: "Dirigeants d'organisations de services ou à forte composante opérationnelle, là où ce qui peut être accompli est limité par la disponibilité de quelques personnes. Je travaille principalement avec des structures de moins de 25 personnes, ou avec des responsables d'une équipe autonome au sein d'un plus grand groupe. J'interviens quand la façon de travailler doit changer : virage technologique, arrivée de l'IA, nouvelle génération."
+  outcomes:
+    - title: "Plus d'impact à effectif constant :"
+      text: "le processus absorbe le volume, la gouvernance reste chez vos experts."
+    - title: "Du temps de qualité, sans interruption :"
+      text: "les équipes gagnent en autonomie et les urgences se raréfient."
+    - title: "Un standard tenu en tout temps,"
+      text: "inscrit dans les opérations plutôt qu'en mémoire."
+    - title: "Le départ d'une personne clé ne vide pas l'organisation."
+      text: ""
+
+work:
+  heading: "Réalisations"
+  read_more: "Lire l'étude de cas"
+  cases:
+    - title: "La vente institutionnelle, menée par une seule personne"
+      context: "Gestionnaire d'actifs canadien, plus de 1 G$. Son premier vendeur institutionnel hérite d'un CRM jamais mis à jour, sans liste de prospects ni processus de vente écrit."
+      engagement: "Trois mois d'accompagnement pour documenter son processus de vente, avant toute automatisation. Ensuite, un nouveau CRM, un script qui classe 14 000 investisseurs selon ses propres critères et une IA qui rédige ses courriels pendant la nuit. Il relit, corrige, envoie."
+      result: "Il mène seul <mark>un pipeline de 200 investisseurs</mark> pour moins de 2 $ par jour en coût d'IA."
+      url: ""
+    - title: "Le savoir des analystes, mis en procédures"
+      context: "Provider Directory, répertoire de fournisseurs de soins de santé alimenté par plus de 300 registres canadiens. Chaque erreur de données ouvre un ticket."
+      engagement: "J'ai dirigé le chantier : huit types de tickets sont devenus des procédures écrites qu'un agent IA applique en puisant dans la documentation existante et l'historique des tickets. Un analyste valide chaque correction avant la mise en production."
+      result: "Sur le premier type de ticket, le temps d'analyste passe de 4 h 30 à 1 h 30 par ticket, soit <mark>7 heures d'analyste récupérées chaque semaine</mark>."
+      url: ""
+
+phases:
+  heading: "Comment nous travaillons ensemble"
+  fees_label: "Facturation :"
+  items:
+    - name: "Diagnostic et plan d'action opérationnel"
+      duration: "2 à 6 semaines"
+      summary:
+        - "Nous documentons comment le travail se fait aujourd'hui, identifions les risques et les goulots, puis priorisons les changements à plus fort impact."
+      fees: "prix fixe. 30 % à la signature, le solde à la livraison si vous êtes satisfait."
+    - name: "Mise en œuvre"
+      duration: "3 à 12 mois"
+      summary:
+        - "Nous simplifions les processus retenus, supprimons les étapes inutiles et automatisons ce qui mérite de l'être."
+        - "Le résultat recherché : moins d'interventions manuelles, moins de dépendance envers certaines personnes, un processus plus rapide et plus facile à transmettre."
+      fees: "à l'heure ou au livrable."
+    - name: "Ancrage et transfert"
+      duration: "Optionnel"
+      summary:
+        - "Soutenir vos opérations dans la durée, ancrer les nouvelles façons de faire et rendre l'équipe autonome avant mon départ."
+      fees: "forfait mensuel, une fois la charge devenue prévisible."
+  deliverables_heading: "Exemples de livrables"
+  deliverables: ["Cartographie des processus", "Matrice des dépendances aux personnes clés", "Analyse des goulots", "Feuille de route 90/180 jours", "Aide à la sélection de technologie", "Écriture des processus et des gabarits", "Automatisation de processus", "Création d'agents IA", "Accompagnement des équipes"]
+
+about:
+  heading: "À propos"
+  text: "Avec plus de quinze ans d'expérience, je combine analyse opérationnelle, technologie et automatisation pour transformer le savoir tacite de vos experts en processus exécutables."
+  values_heading: "Mes valeurs"
+  values: ["Intégrité et cohérence", "Pragmatisme et simplicité", "Votre autonomie en premier", "Apprendre ensemble"]
+
+cta:
+  heading: "Parlons-nous"
+  text: "Sans frais et sans engagement. Vous repartez avec une lecture de votre situation, que nous travaillions ensemble ou non."
+  label: "Réserver un appel de 45 minutes"
+  email: "martin@stimilo.com"

@@ -1,0 +1,167 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+// Brand — stimilo-agent/reference/brand/Stimilo Brand Guidelines.md
+$brand-blue: #0056B3;
+$brand-orange: #FF8C42;
+$brand-grey: #F5F5F5;
+$brand-ink: #1A1A1A;
+
+$primary-color: $brand-blue;
+$link-color: $brand-blue;
+$link-color-hover: darken($brand-blue, 10%);
+$link-color-visited: $brand-blue;
+$masthead-link-color: $brand-ink;
+$masthead-link-color-hover: $brand-blue;
+$text-color: $brand-ink;
+$background-color: #fff;
+$sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$global-font-family: $sans-serif;
+$header-font-family: "Sora", "Inter", sans-serif;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+// ---- stimilo overrides -------------------------------------------------
+
+h1, h2, h3, .page__title { font-family: $header-font-family; font-weight: 700; color: $brand-blue; }
+
+.masthead { border-bottom: 1px solid $brand-grey; }
+.masthead .site-title { font-family: "Sora", sans-serif; font-weight: 400; color: $brand-blue; font-size: 1.6rem; letter-spacing: -0.01em; }
+.greedy-nav .masthead__cta, .greedy-nav .masthead__cta:hover { color: #fff; }
+.masthead__cta { margin-left: 1rem; white-space: nowrap; align-self: center; }
+@media (max-width: 480px) { .masthead__cta { margin-left: .5rem; padding: .4em .7em; font-size: .75rem; } }
+
+.btn--primary { background-color: $brand-blue; color: #fff; }
+
+.page__footer footer { max-width: 1024px; margin: 0 auto; padding: 1.5rem 1rem 2rem; box-sizing: border-box; }
+.page__footer { background: #fff; border-top: 1px solid #e3e3e3; } // white so it separates from the grey CTA band
+.page__footer-copyright { color: $brand-ink; }
+
+// Full-width bands (home page)
+.band { width: 100%; }
+.band--grey { background: $brand-grey; }
+.band__inner { max-width: 1024px; margin: 0 auto; padding: 3rem 1rem; box-sizing: border-box; }
+
+// Home page
+.layout--splash #main { max-width: none; padding: 0; margin: 0; }
+.layout--splash .page__content, .layout--splash article.splash { max-width: none; padding: 0; margin: 0; }
+
+.hero { display: grid; grid-template-columns: 1.5fr 1fr; gap: 2rem 3rem; align-items: center; }
+.hero__media { position: relative; margin: 1.5rem; }
+.hero__media img { position: relative; z-index: 1; display: block; width: 100%; height: auto; border-radius: 16px; }
+// Brand motifs: dot grid (structure) top-right, circle (flow) bottom-left
+.hero__media::before { content: ""; position: absolute; top: -1.5rem; right: -1.5rem; width: 65%; height: 65%; background-image: radial-gradient($brand-blue 2px, transparent 2px); background-size: 18px 18px; opacity: .35; }
+.hero__media::after { content: ""; position: absolute; bottom: -1.5rem; left: -1.5rem; width: 45%; aspect-ratio: 1; border-radius: 50%; background: rgba($brand-blue, .12); }
+.hero__head { grid-column: 1 / -1; }
+.layout--splash .hero__head .hero__eyebrow { margin: 0 0 .6rem; font-size: .85rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #555; }
+.layout--splash .hero__head .hero__title { font-size: 3rem; margin: 0; } // full width; text + photo row below
+.hero__subtitle { font-family: $header-font-family; font-weight: 600; font-size: 1.3rem; }
+.hero__lead { font-size: 1.15rem; max-width: 42rem; }
+
+.hero__text .btn { display: block; width: fit-content; margin: 1.5rem auto 0; }
+
+.outcomes { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 2rem; }
+.outcomes li { margin: 0; padding: 1rem 1.25rem 1rem 3rem; position: relative; background: #fff; border-radius: 8px; }
+.outcomes li strong { font-family: $header-font-family; font-weight: 600; }
+.outcomes li::before { content: ""; position: absolute; left: 1.25rem; top: 1.45rem; width: .7rem; height: .7rem; border-radius: 50%; background: $brand-blue; }
+
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.card { border: 1px solid #e3e3e3; border-radius: 8px; padding: 1.5rem; }
+.card h3 { margin-top: 0; }
+.card p.card__context, .card p.card__engagement { margin: 0 0 .9rem; }
+.card p.card__result { margin: 0; }
+.card__result { font-size: 1.1rem; margin-bottom: 0; }
+.card__result mark { background: none; color: $brand-orange; font-weight: 700; }
+
+// Steps share the parent's rows (subgrid) so dot, title, duration and fees line up across columns
+.process { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 2rem; row-gap: 0; }
+.process__step { position: relative; display: grid; grid-row: span 5; grid-template-rows: subgrid; row-gap: .5rem; align-items: start; margin: 0 0 2rem; background: #fff; border-radius: 8px; padding: 1.5rem; }
+.process__step:not(:last-child)::after { content: "→"; position: absolute; right: -1.6rem; top: 1.9rem; color: $brand-blue; font-size: 1.5rem; }
+.process__step h3 { margin: .3rem 0 0; text-align: center; }
+.process__time { justify-self: center; text-align: center; }
+.process__step p { margin: 0 0 .5rem; }
+.process__step .process__fees { margin: 0 0 .5rem; }
+.process__summary { border-top: 1px solid #e3e3e3; padding-top: .9rem; } // divider on the shared row, so all three line up
+.process__dot { justify-self: center; width: 3rem; height: 3rem; border-radius: 50%; border: 2px solid $brand-blue; color: $brand-blue; display: flex; align-items: center; justify-content: center; font-family: $header-font-family; font-weight: 700; background: #fff; }
+.process__time { font-size: .9rem; color: #555; }
+.process__fees { font-size: .9rem; }
+
+.deliverables__heading { margin: .5rem 0 .75rem; color: $brand-ink; font-size: 1rem; }
+.deliverables { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.deliverables__item { margin: 0; padding: .35rem .8rem; border: 1px solid rgba($brand-blue, .35); border-radius: 999px; background: #fff; color: $brand-blue; font-size: .85rem; }
+.about__text { font-size: 1.15rem; max-width: 46rem; }
+.about__values { margin-top: 2rem; color: $brand-ink; }
+.values { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; }
+.values li { margin: 0; padding: 1.5rem 1rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: .9rem; border: 1px solid #e3e3e3; border-radius: 8px; font-family: $header-font-family; font-weight: 600; }
+.values li::before { content: ""; flex: none; width: 2.2rem; height: 2.2rem; border-radius: 50%; border: 2px solid $brand-blue; background: radial-gradient($brand-blue 30%, transparent 32%); }
+
+.cta { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.cta h2 { margin-top: 0; }
+.cta .btn { flex-shrink: 0; }
+.cta__contact { margin-bottom: 0; }
+
+@media (max-width: 720px) {
+  .outcomes, .cards, .process { grid-template-columns: 1fr; }
+  .values { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .process__step:not(:last-child)::after { content: "↓"; left: 50%; right: auto; transform: translateX(-50%); top: auto; bottom: -2.1rem; }
+  .process__step { margin-bottom: 2.5rem; }
+  .cta { flex-direction: column; align-items: flex-start; }
+  .hero { grid-template-columns: 1fr; gap: 1.5rem; }
+  .hero__media { max-width: 260px; margin: 1.5rem auto; }
+  .layout--splash .hero__head .hero__title { font-size: 2rem; }
+}
+
+// Blog list
+.post-list { list-style: none; padding: 0; margin: 0; }
+.post-list__item { padding: 1.25rem 0; border-bottom: 1px solid #eee; margin: 0; }
+.post-list__title { font-family: $header-font-family; font-weight: 600; font-size: 1.25rem; text-decoration: none; }
+.post-list__meta { font-size: .85rem; color: #666; margin: .3rem 0; }
+.post-list__cat { margin-left: .75rem; padding: .1rem .5rem; border-radius: 999px; background: $brand-grey; color: $brand-blue; }
+.post-list__desc { margin: .3rem 0 0; }
+.post-list__empty { color: #666; }
+.sidebar .nav__list .nav__items a { color: $brand-ink; }
+.sidebar .nav__list .nav__items a.active { color: $brand-blue; font-weight: 600; }
+
+// Post page: one reading column
+.layout--single #main { max-width: 1024px; padding-left: 1rem; padding-right: 1rem; box-sizing: border-box; }
+.layout--single .page { float: none; width: 100%; max-width: 720px; padding-inline-end: 0; margin: 0; } // reading column, left edge on the logo
+// Posts that opt into the contents menu (toc: true): reading column stays left on the logo, menu sits in the right gutter
+@media (min-width: 64em) {
+  .layout--single .page:has(.sidebar__right) { max-width: none; padding-inline-end: 260px; }
+  .layout--single .page:has(.sidebar__right) .sidebar__right { width: 230px; margin-inline-end: -260px; }
+}
+@media (max-width: 63.9375em) { .layout--single .sidebar__right { display: none; } } // phones: full menu would push the article a screen down
+.toc { border: 1px solid #e3e3e3; border-radius: 8px; box-shadow: none; }
+.toc .nav__title { background: $brand-blue; font-family: $header-font-family; }
+.toc__menu a { color: $brand-ink; }
+.toc__menu a:hover, .toc__menu a.active { color: $brand-blue; }
+.layout--single .page__content { font-size: 1.05rem; line-height: 1.65; }
+.layout--single .page__title, .layout--single .page__title a { color: $brand-blue; line-height: 1.2; }
+
+// Phone width: masthead fits on one line; blog side menu becomes a row of links (no toggle)
+@media (max-width: 600px) {
+  .masthead__inner-wrap { padding-left: 1rem; padding-right: 1rem; }
+  .masthead .site-title { font-size: 1.3rem; }
+  .greedy-nav .visible-links a { margin: 0 .4rem; font-size: .85rem; }
+  .layout--splash .masthead__cta { display: none; } // hero button sits just below
+}
+@media (max-width: 63.9375em) {
+  .nav__list label { display: none !important; }
+  .nav__list .nav__items { max-height: none; opacity: 1; overflow: visible; transform: none; margin-top: 0; }
+  .nav__list .nav__sub-title { display: none; }
+  .nav__list .nav__items ul { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin: 0; padding: 0; list-style: none; }
+  .nav__list .nav__items ul li { margin: 0; }
+}
+
+// One content column: masthead and blog list line up with the home bands (.band__inner)
+.masthead__inner-wrap { max-width: 1024px; margin: 0 auto; padding-left: 1rem; padding-right: 1rem; box-sizing: border-box; }
+.layout--archive #main { max-width: 1024px; padding-left: 1rem; padding-right: 1rem; box-sizing: border-box; }
+// Blog list: narrow side menu + list using the rest of the column (theme reserves a right-hand gutter)
+@media (min-width: 64em) {
+  .layout--archive .sidebar { width: calc(200px - 1em); opacity: 1; }
+  .layout--archive .archive { width: calc(100% - 200px); padding-inline-end: 0; }
+}

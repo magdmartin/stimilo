@@ -1,0 +1,27 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@400;600;700&display=swap">
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/icons/favicon.svg' | relative_url }}">
+<link rel="icon" href="{{ '/assets/icons/favicon.ico' | relative_url }}" sizes="any">
+<link rel="apple-touch-icon" href="{{ '/assets/icons/apple-touch-icon.png' | relative_url }}">
+{% if page.alternates %}
+  {% for alt in page.alternates %}<link rel="alternate" hreflang="{{ alt[0] }}" href="{{ alt[1] | absolute_url }}">
+  {% endfor %}<link rel="alternate" hreflang="x-default" href="{{ page.alternates.en | absolute_url }}">
+{% endif %}
+{% if page.layout == "splash" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "stimilo",
+  "url": {{ page.url | absolute_url | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "inLanguage": {{ page.locale | jsonify }},
+  "image": {{ '/assets/img/Martin.jpeg' | absolute_url | jsonify }},
+  "email": "martin@stimilo.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Montréal", "addressRegion": "QC", "addressCountry": "CA" },
+  "areaServed": ["Québec", "Canada"],
+  "founder": { "@type": "Person", "name": "Martin Magdinier", "jobTitle": {{ page.job_title | jsonify }}, "sameAs": ["https://www.linkedin.com/in/magdinier"] }
+}
+</script>
+{% endif %}

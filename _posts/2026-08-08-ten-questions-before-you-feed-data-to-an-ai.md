@@ -1,10 +1,13 @@
 ---
-layout: post
+layout: single
 title: Ten questions to ask before you commit new data to an AI
 description: A checklist written in 2019 for choosing a data source, reread for the era of agents acting on it.
 date: 2026-08-08
 categories: [notes]
 tags: [data governance, AI, process]
+toc: true
+toc_sticky: true
+toc_label: "On this page"
 ---
 
 Ten questions to ask before you commit to a data source. None of them are about extraction rules or code; they are about the governance of each feed — where it comes from, who stands behind it, how it was built, and what you are allowed to do with it.

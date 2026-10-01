@@ -1,0 +1,89 @@
+{% assign c = include.copy %}
+{% assign booking = site.data.navigation.cta.en.url %}
+
+<section id="hero" class="band">
+  <div class="band__inner hero">
+    <div class="hero__head">
+      <p class="hero__eyebrow">{{ c.hero.eyebrow }}</p>
+      <h1 class="hero__title">{{ c.hero.title }}</h1>
+    </div>
+    <div class="hero__text">
+      <p class="hero__subtitle">{{ c.hero.subtitle }}</p>
+      {% for p in c.hero.lead %}<p class="hero__lead">{{ p }}</p>{% endfor %}
+      <a class="btn btn--primary btn--large" href="{{ booking }}">{{ c.hero.cta_label }}</a>
+    </div>
+    <div class="hero__media">
+      <img src="{{ '/assets/img/Martin.jpeg' | relative_url }}" alt="{{ c.hero.photo_alt }}" width="512" height="512">
+    </div>
+  </div>
+</section>
+
+<section id="audience" class="band band--grey">
+  <div class="band__inner">
+    <h2>{{ c.audience.heading }}</h2>
+    <p class="audience__intro">{{ c.audience.intro }}</p>
+    <ul class="outcomes">
+      {% for o in c.audience.outcomes %}<li><strong>{{ o.title }}</strong> {{ o.text }}</li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section id="work" class="band">
+  <div class="band__inner">
+    <h2>{{ c.work.heading }}</h2>
+    <div class="cards">
+      {% for case in c.work.cases %}
+      <article class="card">
+        <h3>{{ case.title }}</h3>
+        <p class="card__context">{{ case.context }}</p>
+        <p class="card__engagement">{{ case.engagement }}</p>
+        <p class="card__result">{{ case.result }}</p>
+        {% if case.url != "" %}<p><a href="{{ case.url | relative_url }}">{{ c.work.read_more }} →</a></p>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="phases" class="band band--grey">
+  <div class="band__inner">
+    <h2>{{ c.phases.heading }}</h2>
+    <ol class="process">
+      {% for ph in c.phases.items %}
+      <li class="process__step">
+        <span class="process__dot">{{ forloop.index }}</span>
+        <h3>{{ ph.name }}</h3>
+        <span class="process__time">{{ ph.duration }}</span>
+        <p class="process__fees"><strong>{{ c.phases.fees_label }}</strong> {{ ph.fees }}</p>
+        <div class="process__summary">{% for p in ph.summary %}<p>{{ p }}</p>{% endfor %}</div>
+      </li>
+      {% endfor %}
+    </ol>
+    <h3 class="deliverables__heading">{{ c.phases.deliverables_heading }}</h3>
+    <ul class="deliverables">
+      {% for d in c.phases.deliverables %}<li class="deliverables__item">{{ d }}</li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section id="about" class="band">
+  <div class="band__inner">
+    <h2>{{ c.about.heading }}</h2>
+    <p class="about__text">{{ c.about.text }}</p>
+    <h3 class="about__values">{{ c.about.values_heading }}</h3>
+    <ul class="values">
+      {% for v in c.about.values %}<li>{{ v }}</li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section id="cta" class="band band--grey">
+  <div class="band__inner cta">
+    <div class="cta__text">
+      <h2>{{ c.cta.heading }}</h2>
+      <p>{{ c.cta.text }}</p>
+      <p class="cta__contact"><a href="mailto:{{ c.cta.email }}">{{ c.cta.email }}</a></p>
+    </div>
+    <a class="btn btn--primary btn--large" href="{{ booking }}">{{ c.cta.label }}</a>
+  </div>
+</section>

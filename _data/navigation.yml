@@ -1,0 +1,33 @@
+main:
+  - title: "Blog"
+    url: /blog/
+  - title: "Contact"
+    url: /contact/
+  - title: "FR"
+    url: /fr/
+
+main_fr:
+  - title: "Blog"
+    url: /blog/
+  - title: "Contact"
+    url: /fr/contact/
+  - title: "EN"
+    url: /
+
+cta:
+  en:
+    title: "Book a call"
+    url: "https://meeting.calendarhero.com/stimilodiscoverymartin"
+  fr:
+    title: "Réserver un appel"
+    url: "https://meeting.calendarhero.com/stimilodiscoverymartin"
+
+blog:
+  - title: "Blog"
+    children:
+      - title: "All posts"
+        url: /blog/
+      - title: "Case studies"
+        url: /blog/case-studies/
+      - title: "Notes"
+        url: /blog/notes/

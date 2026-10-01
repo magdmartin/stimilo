@@ -1,0 +1,18 @@
+{% assign posts = include.posts %}
+{% if posts and posts.size > 0 %}
+{% assign posts = posts | sort: 'date' | reverse %}
+<ul class="post-list">
+  {% for post in posts %}
+  <li class="post-list__item">
+    <a class="post-list__title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <div class="post-list__meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+      {% for cat in post.categories %}<span class="post-list__cat">{% if cat == 'case-study' %}Case study{% else %}{{ cat | capitalize }}{% endif %}</span>{% endfor %}
+    </div>
+    {% if post.description %}<p class="post-list__desc">{{ post.description }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="post-list__empty">No posts yet.</p>
+{% endif %}
