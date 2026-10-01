@@ -30,6 +30,7 @@ def exists(rel):
 def text(rel):
     """Visible text: tags stripped, entities decoded, smart quotes and spaces normalised."""
     s = re.sub(r"<(script|style)\b.*?</\1>", " ", html(rel), flags=re.S)
+    s = re.sub(r"</?(strong|em|mark|a)\b[^>]*>", "", s)  # inline tags don't break words
     s = htmllib.unescape(re.sub(r"<[^>]+>", " ", s))
     for a, b in {"’": "'", "‘": "'", "“": '"', "”": '"',
                  " ": " ", " ": " ", "‑": "-", "–": "-"}.items():
@@ -246,7 +247,7 @@ def check_home_content():
         ("index.html",
          ["Engagement.", "Fees: fixed price, 2 to 6 weeks", "end to end", "4.4", "1.6 hours", "Starting point", "What we built", "every email personalized", "It finds precedent"],
          ["Who this is for, and what you get",
-          "Owners and leaders of services or operations-heavy organizations with fewer than 25 people",
+          "Owners and leaders of service businesses or operations-heavy organizations, where the work runs through a handful of people", "I work mostly with organizations of fewer than 25 people",
           "I come in when the way the work gets done has to change: a technology shift, the arrival of AI, a new generation taking over.",
           "Example deliverables", "Key-person dependency matrix", "90/180-day roadmap", "AI agent development",
           "The process scales with the volume; governance stays with your experts.",
@@ -266,10 +267,10 @@ def check_home_content():
           "L'IA est utilisée", "Point de départ", "Ce que nous avons bâti", "chaque courriel personnalisé", "Il cherche les précédents",
           "prix fixe, 2 à 6 semaines"],
          ["À qui cela s'adresse, et ce que vous y gagnez",
-          "Dirigeants d'organisations de services ou à forte composante opérationnelle",
-          "J'interviens quand la façon de travailler doit changer : virage technologique, arrivée de l'IA, nouvelle génération.",
+          "Dirigeants d'entreprises de services ou d'organisations à forte composante opérationnelle",
+          "J'interviens quand la façon de travailler doit changer : virage technologique, arrivée de l'IA, passage à la relève.",
           "Exemples de livrables", "Matrice des dépendances aux personnes clés", "Création d'agents IA",
-          "Un standard tenu en tout temps, inscrit dans les opérations plutôt qu'en mémoire.",
+          "Un standard tenu en tout temps : inscrit dans les opérations plutôt qu'en mémoire.",
           "Gestionnaire d'actifs canadien, plus de 1 G$.",
           "un script qui classe 14 000 investisseurs selon ses propres critères",
           "huit types de tickets sont devenus des procédures écrites qu'un agent IA applique",
@@ -397,8 +398,8 @@ def check_home_meta_descriptions_full():
 @check
 def check_phase3_not_optional_twice():
     assert "An optional phase" not in text("index.html") and "Volet optionnel" not in text("fr/index.html")
-    assert "Support your operations over time" in text("index.html")
-    assert "Soutenir vos opérations dans la durée" in text("fr/index.html")
+    assert "We support your operations over time" in text("index.html")
+    assert "Nous soutenons vos opérations dans la durée" in text("fr/index.html")
 
 
 

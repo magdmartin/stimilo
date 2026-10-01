@@ -165,3 +165,5 @@ h1, h2, h3, .page__title { font-family: $header-font-family; font-weight: 700; c
   .layout--archive .sidebar { width: calc(200px - 1em); opacity: 1; }
   .layout--archive .archive { width: calc(100% - 200px); padding-inline-end: 0; }
 }
+
+.audience__intro strong, .card__context strong, .card__engagement strong { font-weight: 700; color: $brand-blue; }

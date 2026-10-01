@@ -4,21 +4,21 @@ hero:
   subtitle: "Turn your team's expertise into a system."
   lead:
     - "Too much of how your organization works lives in your head and your team's habits. You're the answer to every question, and it can't run to your standard when you step away."
-    - "I take how you run it and build that into the organization itself, into process and the right automation, AI where it pays and not where it's fashionable, so your team can operate at a larger scale without losing quality."
+    - "I take how you run it and build that into the organization itself: process, the right automation, and AI where it pays, not where it's fashionable. Your team can then operate at a larger scale without losing quality."
   cta_label: "Book a 45-minute call"
   photo_alt: "Martin Magdinier"
 
 
 audience:
   heading: "Who this is for, and what you get"
-  intro: "Owners and leaders of services or operations-heavy organizations with fewer than 25 people, and heads of a self-contained team inside a larger group, where the work runs through a handful of people, and that has started to cap what the organization can take on. I come in when the way the work gets done has to change: a technology shift, the arrival of AI, a new generation taking over."
+  intro: "<strong>Owners and leaders of service businesses</strong> or operations-heavy organizations, <strong>where the work runs through a handful of people</strong> and that bottleneck has started to cap what you can take on. I work mostly with organizations of <strong>fewer than 25 people</strong>, or with heads of a self-contained team inside a larger group. I come in when the way the work gets done has to change: a technology shift, the arrival of AI, a new generation taking over."
   outcomes:
     - title: "More impact from the same team."
       text: "The process scales with the volume; governance stays with your experts."
     - title: "Focus time, without interruptions."
       text: "Teams become more independent and emergencies are less frequent."
-    - title: "It runs to your standard whether you're in the room or not."
-      text: "Your standard is built in, not remembered."
+    - title: "It runs the same whether you're in the room or not."
+      text: "Your standard lives in the process, where anyone can follow it."
     - title: "A key person can leave without taking the organization with them."
       text: "The know-how stays in the company."
 
@@ -27,13 +27,13 @@ work:
   read_more: "Read the case study"
   cases:
     - title: "Institutional sales, run by one person"
-      context: "Canadian asset manager, $1B+. Its first institutional salesperson inherited an out-of-date CRM, no prospect list and no written sales process."
-      engagement: "I coached him for three months to write down how he sells, before automating anything. Then a new CRM, a script that scores 14,000 investor records on his own criteria, and AI that drafts his emails overnight. He edits and sends."
+      context: "Canadian asset manager, $1B+. Its first institutional salesperson inherited an out-of-date CRM, no prospect list and <strong>no written sales process</strong>."
+      engagement: "I coached him for three months to <strong>write down how he sells, before automating anything</strong>. Then a new CRM, a script that scores 14,000 investor records on his own criteria, and AI that drafts his emails overnight. He edits and sends."
       result: "He runs <mark>a 200-investor pipeline on his own</mark> for under $2 a day in AI cost."
       url: ""
     - title: "Analyst know-how, turned into procedures"
       context: "Provider Directory, a healthcare data platform fed by 300+ Canadian registries. Each data error opens a ticket."
-      engagement: "I directed the build: eight ticket types became written procedures an AI agent follows, drawing on the existing documentation and the ticket history. An analyst reviews every fix before it goes live."
+      engagement: "I directed the build: eight ticket types became <strong>written procedures an AI agent follows</strong>, drawing on the existing documentation and the ticket history. <strong>An analyst reviews every fix</strong> before it goes live."
       result: "On the first ticket type, analyst time fell from 4.5 to 1.5 hours per ticket, or <mark>7 analyst hours back each week</mark>."
       url: ""
 
@@ -55,7 +55,7 @@ phases:
     - name: "Anchor & Handover"
       duration: "Optional"
       summary:
-        - "Support your operations over time, embed the new ways of working and make the team self-sufficient before I leave."
+        - "We support your operations over time, embed the new ways of working and make the team self-sufficient before I leave."
       fees: "monthly retainer, once the workload is predictable."
   deliverables_heading: "Example deliverables"
   deliverables: ["Process mapping", "Key-person dependency matrix", "Bottleneck analysis", "90/180-day roadmap", "Technology selection support", "Written procedures and templates", "Process automation", "AI agent development", "Team coaching and support"]
@@ -68,6 +68,6 @@ about:
 
 cta:
   heading: "Let's talk"
-  text: "Free and with no commitment. You leave with a reading of your situation, whether we work together or not."
+  text: "Free and with no commitment. You leave with my read on your situation, whether we work together or not."
   label: "Book a 45-minute call"
   email: "martin@stimilo.com"
