@@ -62,7 +62,7 @@ phases:
 
 about:
   heading: "À propos"
-  text: "Avec plus de quinze ans d'expérience, je combine analyse opérationnelle, technologie et automatisation pour transformer le savoir tacite de vos experts en processus exécutables."
+  text: "J'ai créé Stimilo après dix ans à la tête de RefinePro, ma firme-conseil en données, toujours pour mettre les outils de données et d'IA entre les mains de ceux qui font le travail. J'ai mené plus de dix projets pluriannuels, des startups aux sociétés du Fortune 500, et je contribue à OpenRefine, un logiciel libre de traitement de données. La méthode n'a pas changé depuis ma maîtrise en gestion des TI : écrire comment travaillent les experts, puis bâtir autour."
   values_heading: "Mes valeurs"
   values: ["Intégrité et cohérence", "Pragmatisme et simplicité", "Votre autonomie en premier", "Apprendre ensemble"]
 
@@ -71,3 +71,5 @@ cta:
   text: "Sans frais et sans engagement. Vous repartez avec une lecture de votre situation, que nous travaillions ensemble ou non."
   label: "Réserver un appel de 45 minutes"
   email: "martin@stimilo.com"
+  print_scan: "Scannez pour réserver un appel de 45 minutes"
+  print_site: "stimilo.com/fr"

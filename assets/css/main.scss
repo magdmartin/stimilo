@@ -54,8 +54,10 @@ h1, h2, h3, .page__title { font-family: $header-font-family; font-weight: 700; c
 .hero__media { position: relative; margin: 1.5rem; }
 .hero__media img { position: relative; z-index: 1; display: block; width: 100%; height: auto; border-radius: 16px; }
 // Brand motifs: dot grid (structure) top-right, circle (flow) bottom-left
+.hero__media { display: block; }
+.hero__media .hero__name { position: relative; z-index: 1; width: 100%; margin: .6rem 0 0; padding: 0; text-align: center; font-family: $header-font-family; font-weight: 600; font-size: .95rem; color: $brand-ink; }
 .hero__media::before { content: ""; position: absolute; top: -1.5rem; right: -1.5rem; width: 65%; height: 65%; background-image: radial-gradient($brand-blue 2px, transparent 2px); background-size: 18px 18px; opacity: .35; }
-.hero__media::after { content: ""; position: absolute; bottom: -1.5rem; left: -1.5rem; width: 45%; aspect-ratio: 1; border-radius: 50%; background: rgba($brand-blue, .12); }
+.hero__media::after { content: ""; position: absolute; bottom: .5rem; left: -1.5rem; width: 45%; aspect-ratio: 1; border-radius: 50%; background: rgba($brand-blue, .12); }
 .hero__head { grid-column: 1 / -1; }
 .layout--splash .hero__head .hero__eyebrow { margin: 0 0 .6rem; font-size: .85rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #555; }
 .layout--splash .hero__head .hero__title { font-size: 3rem; margin: 0; } // full width; text + photo row below
@@ -167,3 +169,49 @@ h1, h2, h3, .page__title { font-family: $header-font-family; font-weight: 700; c
 }
 
 .audience__intro strong, .card__context strong, .card__engagement strong { font-weight: 700; color: $brand-blue; }
+
+// ---- print: the homepage doubles as the conference handout (two Letter pages) ----
+.cta__print { display: none; }
+@media print {
+  @page { size: letter; margin: 12mm 14mm; }
+  html { font-size: 9pt; }
+  p { margin-bottom: .6em; }
+  h3 { font-size: 1.15rem; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .masthead, .page__footer, #footer, .skip-links, .btn { display: none !important; }
+  .hero__head::before { content: "stimilo"; display: block; margin-bottom: .6rem; font-family: "Sora", sans-serif; font-weight: 400; font-size: 1.6rem; color: $brand-blue; } // wordmark, since the masthead is hidden
+  a[href]::after { content: none !important; }
+  .band__inner { max-width: none; padding: .8rem 0; }
+  .band--grey { background: none; }
+  h2 { margin: 0 0 .6rem; }
+  .hero { gap: 1rem 2rem; }
+  .layout--splash .hero__head .hero__title { font-size: 2.2rem; }
+  .hero__subtitle { font-size: 1.1rem; }
+  .hero__lead { font-size: 1rem; }
+  .hero__media { margin: .5rem 1rem; max-width: 150px; justify-self: end; }
+  .outcomes li { background: $brand-grey; padding: .6rem .9rem .6rem 2.4rem; }
+  .outcomes li::before { left: .9rem; top: 1rem; }
+  .card { padding: .8rem 1rem; break-inside: avoid; }
+  .cards { gap: 1rem; }
+  .outcomes { gap: .6rem 1rem; margin-top: .8rem; }
+  #phases { break-before: page; }
+  .process__step, .values li { break-inside: avoid; }
+  .values li::before { width: 1.6rem; height: 1.6rem; }
+  .process h3 { font-size: 1.1rem; }
+  .deliverables__heading { margin-top: .8rem; }
+  .process { margin-top: .6rem; }
+  .process__step { padding: .5rem .8rem; margin-bottom: .3rem; row-gap: .3rem; }
+  .process__step:not(:last-child)::after { top: 1rem; }
+  .process__dot { width: 2.2rem; height: 2.2rem; }
+  .process__summary { padding-top: .5rem; }
+  .deliverables { gap: .35rem; }
+  .deliverables__item { padding: .2rem .6rem; }
+  .about__text { max-width: none; font-size: 1rem; }
+  .values { gap: .6rem; }
+  .values li { flex-direction: row; justify-content: center; gap: .5rem; padding: .5rem .6rem; }
+  .cta { justify-content: space-between; }
+  .cta__print { display: flex; align-items: center; gap: 1rem; flex-shrink: 0; }
+  .cta__print img { width: 26mm; height: 26mm; }
+  .cta__print p { margin: 0; font-size: .95rem; }
+  .cta__print strong { font-family: $header-font-family; color: $brand-blue; font-size: 1.2rem; }
+}

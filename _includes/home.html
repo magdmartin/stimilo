@@ -12,9 +12,10 @@
       {% for p in c.hero.lead %}<p class="hero__lead">{{ p }}</p>{% endfor %}
       <a class="btn btn--primary btn--large" href="{{ booking }}">{{ c.hero.cta_label }}</a>
     </div>
-    <div class="hero__media">
+    <figure class="hero__media">
       <img src="{{ '/assets/img/Martin.jpeg' | relative_url }}" alt="{{ c.hero.photo_alt }}" width="512" height="512">
-    </div>
+      <figcaption class="hero__name">{{ c.hero.photo_alt }}</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -85,5 +86,9 @@
       <p class="cta__contact"><a href="mailto:{{ c.cta.email }}">{{ c.cta.email }}</a></p>
     </div>
     <a class="btn btn--primary btn--large" href="{{ booking }}">{{ c.cta.label }}</a>
+    <div class="cta__print">
+      <img src="{{ '/assets/img/qr-booking.svg' | relative_url }}" alt="" width="132" height="132">
+      <p>{{ c.cta.print_scan }}<br><strong>{{ c.cta.print_site }}</strong></p>
+    </div>
   </div>
 </section>

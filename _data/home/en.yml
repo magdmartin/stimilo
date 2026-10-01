@@ -62,7 +62,7 @@ phases:
 
 about:
   heading: "About me"
-  text: "With more than fifteen years of experience, I combine operational analysis, technology and automation to turn your experts' tacit knowledge into processes that run."
+  text: "I created Stimilo after ten years running RefinePro, my data consultancy, with the same aim of putting data and AI tools in the hands of the people who do the work. I've led more than ten long-term projects, from startups to Fortune 500 companies, and I contribute to OpenRefine, an open-source data tool. The method hasn't changed since my master's in IT management: write down how experts work, then build around it."
   values_heading: "Values I work by"
   values: ["Integrity & coherence", "Pragmatism & simplicity", "Capacity over dependency", "Co-building & shared learning"]
 
@@ -71,3 +71,5 @@ cta:
   text: "Free and with no commitment. You leave with my read on your situation, whether we work together or not."
   label: "Book a 45-minute call"
   email: "martin@stimilo.com"
+  print_scan: "Scan to book a 45-minute call"
+  print_site: "stimilo.com"

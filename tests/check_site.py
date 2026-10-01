@@ -260,7 +260,7 @@ def check_home_content():
           "Provider Directory, a healthcare data platform fed by 300+ Canadian registries.",
           "What we're after: fewer manual interventions",
           "fixed price. 30% on signing", "hourly or per deliverable.",
-          "About me", "With more than fifteen years of experience, I combine operational analysis",
+          "About me", "I created Stimilo after ten years running RefinePro", "master's in IT management",
           "Co-building & shared learning"]),
         ("fr/index.html",
          ["Financement possible", "Service Québec", "ESSOR", "Intervention.", "codifi",
@@ -279,7 +279,7 @@ def check_home_content():
           "Le résultat recherché : moins d'interventions manuelles",
           "prix fixe. 30 % à la signature",
           "Je travaille principalement avec des structures de moins de 25 personnes",
-          "À propos", "Avec plus de quinze ans d'expérience", "Apprendre ensemble"]),
+          "À propos", "J'ai créé Stimilo après dix ans à la tête de RefinePro", "maîtrise en gestion des TI", "Apprendre ensemble"]),
     ]:
         t = text(page)
         for g in gone:
@@ -437,6 +437,19 @@ def check_post_toc_opt_in():
     assert 'href="#hard-limits"' in h and 'href="#6-under-what-licence-is-the-data-available"' in h, "TOC should list sections and the numbered questions"
     for page in ["contact/index.html", "fr/contact/index.html", "404.html"]:
         assert "toc__menu" not in html(page), f"{page}: TOC is opt-in per post"
+
+
+@check
+def check_print_handout():
+    """The homepage prints as the conference handout: QR to the booking page, no buttons or nav (Martin, 2026-10-01)."""
+    exists("assets/img/qr-booking.svg")
+    for page, site in [("index.html", "stimilo.com"), ("fr/index.html", "stimilo.com/fr")]:
+        h = html(page)
+        assert 'class="cta__print"' in h and "qr-booking.svg" in h, f"{page}: print CTA with QR missing"
+        assert f"<strong>{site}</strong>" in h, f"{page}: print CTA should show {site}"
+    c = css()
+    assert re.search(r"@page\s*\{\s*size:\s*letter", c), "print stylesheet missing"
+    assert re.search(r"\.cta__print\s*\{\s*display:\s*none", c), "QR block must stay hidden on screen"
 
 
 if __name__ == "__main__":
